@@ -20,6 +20,16 @@ function Main() {
     setTodoList([...todoList, formatedNewTodo]);
   }
 
+  function handleDeleteTodo(e, index) {
+    const newTodos = [...todoList];
+    newTodos.splice(index, 1);
+    setTodoList([...newTodos]);
+  }
+
+  function handleEditTodo(e, index) {
+    console.log('Delete', index);
+  }
+
   return (
     <div className="main">
       <h1>Lista de Tarefas</h1>
@@ -32,18 +42,24 @@ function Main() {
       </form>
 
       <ul className="todo-list">
-        {todoList.map((todo) => (
+        {todoList.map((todo, index) => (
           <li key={todo}>
             •
             {' '}
             {todo}
             <div>
-              <button type="button">
-                <FiEdit size={26} color="#a7c0b2" />
-              </button>
-              <button type="button">
-                <FiDelete size={26} color="#c68384" />
-              </button>
+              <FiEdit
+                className="edit"
+                size={26}
+                color="#a7c0b2"
+                onClick={(e) => handleEditTodo(e, index)}
+              />
+              <FiDelete
+                className="delete"
+                size={26}
+                color="#c68384"
+                onClick={(e) => handleDeleteTodo(e, index)}
+              />
             </div>
           </li>
         ))}
