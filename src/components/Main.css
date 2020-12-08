@@ -66,9 +66,8 @@
   padding: 5px;
 }
 
-.main .todo-list li button {
-  background: none;
-  border: none;
+.main .todo-list li .delete, .edit {
+  cursor: pointer;
   margin-left: 5px;
 }
 
