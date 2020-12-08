@@ -4,10 +4,10 @@
 - [x] create-react-app
 - [x] Initial settings
 - [x] Eslint and Editorconfig
-- [ ] Components
-- [ ] Stylizing the form
-- [ ] Stylizing tasks
-- [ ] Adding tasks
+- [x] Components
+- [x] Stylizing the form
+- [x] Stylizing tasks
+- [x] Adding tasks
 - [ ] Deleting tasks
 - [ ] Editing tasks
 - [ ] Saving to localStorage
