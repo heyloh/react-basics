@@ -56,8 +56,23 @@
 }
 
 .main .todo-list li {
-  color: rgb(51, 53, 54);
+  color: rgb(102, 104, 105);
   font-size: 16px;
   font-weight: normal;
   list-style: inside;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.main .todo-list li button {
+  background: none;
+  border: none;
+  margin-left: 5px;
+}
+
+.main .todo-list li div {
+  display: flex;
+  align-items: center;
 }
