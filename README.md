@@ -6,9 +6,9 @@
 - [x] Eslint and Editorconfig
 - [x] Components
 - [x] Stylizing the form
-- [x] Stylizing tasks
-- [x] Adding tasks
-- [ ] Deleting tasks
-- [ ] Editing tasks
+- [x] Stylizing todos
+- [x] Adding todos
+- [x] Deleting todos
+- [ ] Editing todos
 - [ ] Saving to localStorage
 - [ ] Separating the components
