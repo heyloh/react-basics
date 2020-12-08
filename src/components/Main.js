@@ -6,6 +6,7 @@ import './Main.css';
 function Main() {
   const [newTodo, setNewTodo] = useState('');
   const [todoList, setTodoList] = useState([]);
+  const [todoIndex, setTodoIndex] = useState(-1);
 
   function handleChangeInput(e) {
     return setNewTodo(e.target.value);
@@ -17,8 +18,14 @@ function Main() {
 
     if (todoList.indexOf(formatedNewTodo) !== -1) return;
 
-    setTodoList([...todoList, formatedNewTodo]);
-    setNewTodo('');
+    if (todoIndex === -1) {
+      setTodoList([...todoList, formatedNewTodo]);
+      setNewTodo('');
+    } else {
+      todoList[todoIndex] = newTodo;
+      setTodoIndex(-1);
+      setNewTodo('');
+    }
   }
 
   function handleDeleteTodo(e, index) {
@@ -28,7 +35,8 @@ function Main() {
   }
 
   function handleEditTodo(e, index) {
-    console.log('Delete', index);
+    setTodoIndex(index);
+    setNewTodo(todoList[index]);
   }
 
   return (
