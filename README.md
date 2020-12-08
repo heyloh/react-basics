@@ -1,5 +1,7 @@
 # ⚛️ React (Basic)
+Todo list made using React for learning purposes.
 
+> Firefox not reading LocalStorage data
 ## To-do:
 - [x] create-react-app
 - [x] Initial settings
@@ -9,6 +11,5 @@
 - [x] Stylizing todos
 - [x] Adding todos
 - [x] Deleting todos
-- [ ] Editing todos
-- [ ] Saving to localStorage
-- [ ] Separating the components
+- [x] Editing todos
+- [x] Saving to localStorage
