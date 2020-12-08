@@ -18,6 +18,7 @@ function Main() {
     if (todoList.indexOf(formatedNewTodo) !== -1) return;
 
     setTodoList([...todoList, formatedNewTodo]);
+    setNewTodo('');
   }
 
   function handleDeleteTodo(e, index) {
@@ -35,7 +36,7 @@ function Main() {
       <h1>Lista de Tarefas</h1>
 
       <form action="#">
-        <input type="text" onChange={handleChangeInput} />
+        <input type="text" value={newTodo} onChange={handleChangeInput} />
         <button type="submit" onClick={handleAddTodo}>
           <FiPlus size={26} color="#FFF" />
         </button>
