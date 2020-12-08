@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiPlus, FiEdit, FiDelete } from 'react-icons/fi';
 
 import './Main.css';
@@ -7,6 +7,16 @@ function Main() {
   const [newTodo, setNewTodo] = useState('');
   const [todoList, setTodoList] = useState([]);
   const [todoIndex, setTodoIndex] = useState(-1);
+
+  useEffect(() => {
+    const todosStorage = JSON.parse(localStorage.getItem('todoList'));
+    if (!todosStorage) return;
+    setTodoList([...todosStorage]);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todoList', JSON.stringify(todoList));
+  }, [todoList, todoIndex]);
 
   function handleChangeInput(e) {
     return setNewTodo(e.target.value);
@@ -23,8 +33,8 @@ function Main() {
       setNewTodo('');
     } else {
       todoList[todoIndex] = newTodo;
-      setTodoIndex(-1);
       setNewTodo('');
+      setTodoIndex(-1);
     }
   }
 
