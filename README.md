@@ -1,9 +1,9 @@
 # ⚛️ React (Basic)
 
 ## To-do:
-- [ ] create-react-app
-- [ ] Initial settings
-- [ ] Eslint and Editorconfig
+- [x] create-react-app
+- [x] Initial settings
+- [x] Eslint and Editorconfig
 - [ ] Components
 - [ ] Stylizing the form
 - [ ] Stylizing tasks
