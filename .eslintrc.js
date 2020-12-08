@@ -20,5 +20,8 @@ module.exports = {
   ],
   rules: {
     'react/jsx-filename-extension': 'off',
+    'no-unused-vars': 'warn',
+    'no-console': 'off',
+    'react/no-array-index-key': 'off',
   },
 };
