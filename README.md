@@ -13,3 +13,6 @@ Todo list made using React for learning purposes.
 - [x] Deleting todos
 - [x] Editing todos
 - [x] Saving to localStorage
+
+---
+Made with ❤️ by Lohana Torres.
